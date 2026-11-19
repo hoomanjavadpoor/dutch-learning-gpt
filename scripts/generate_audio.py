@@ -17,10 +17,12 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("model", type=Path, help="Piper ONNX model with its adjacent config")
+    parser.add_argument("--section", choices=("words", "sentences"), default="words")
     args = parser.parse_args()
 
-    vocabulary = (ROOT / "words.js").read_text(encoding="utf-8")
-    entries = json.loads(vocabulary.strip().removeprefix("const WORDS = ").removesuffix(";"))
+    vocabulary = (ROOT / f"{args.section}.js").read_text(encoding="utf-8")
+    declaration = f"const {args.section.upper()} = "
+    entries = json.loads(vocabulary.strip().removeprefix(declaration).removesuffix(";"))
     output = ROOT / "audio"
     output.mkdir(exist_ok=True)
     voice = PiperVoice.load(args.model)
