@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "Woordenboek · Dutch for life",
+  "short_name": "Woordenboek",
+  "description": "Study Dutch words and sentences with English and Persian translations.",
+  "lang": "en",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#102a43",
+  "background_color": "#f5f7fb",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

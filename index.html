@@ -1,4 +1,10 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Woordenboek — Dutch A0–A2</title><style>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" href="./icons/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+<meta name="theme-color" content="#102a43">
+<meta name="apple-mobile-web-app-title" content="Woordenboek">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Woordenboek — Dutch A0–A2</title><style>
 :root{font-family:Inter,system-ui,-apple-system,sans-serif;color:#17243a;background:#f5f7fb}*{box-sizing:border-box}body{margin:0}header{background:#102a43;color:white;padding:30px max(20px,calc((100vw - 1200px)/2));}header h1{font-size:32px;margin:0 0 6px}header p{color:#c8d7e8;margin:0}.wrap{max-width:1200px;margin:25px auto;padding:0 18px}.stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}.stat{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:13px 20px;flex:1;min-width:140px}.stat b{font-size:23px;display:block}.stat span{font-size:12px;color:#65758b}.controls{background:white;padding:16px;border:1px solid #e2e8f0;border-radius:14px;display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}input,select,button{font:inherit;border:1px solid #d7e0eb;border-radius:9px;padding:11px;background:white;color:#1b2b40}input{flex:2;min-width:220px}select{flex:1;min-width:140px}button{cursor:pointer}button:hover{background:#eef4fb}.layout{display:grid;grid-template-columns:220px 1fr;gap:20px}.sidebar,.main{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:16px}.sidebar h3{margin:0 0 12px}.cat{display:block;width:100%;text-align:left;border:0;padding:10px;margin:2px 0}.cat.active{background:#e1efff;color:#0754a0;font-weight:700}.cat small{float:right;color:#7a899a}.topline{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.topline h2{margin:0 0 14px}.wordgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:12px}.word{position:relative;perspective:900px;min-width:0}.word h3{margin:0 0 8px;font-size:20px;padding-right:66px}.word p{margin:5px 0;font-size:14px}.fa{direction:rtl;text-align:left;font-family:Tahoma,Arial,sans-serif;color:#42526a}.meta{display:flex;gap:6px;margin-top:12px}.tag{background:#eaf1f9;border-radius:6px;padding:3px 7px;font-size:11px;color:#35516d}.actions{position:absolute;right:9px;top:10px;display:flex;gap:3px}.actions button{padding:5px 7px;border:0;font-size:17px}.actions button.done{color:#087e63;background:#d9f6e9}.empty{text-align:center;padding:50px;color:#738196}.foot{padding:25px;text-align:center;color:#7b8795;font-size:12px}@media(max-width:700px){.layout{grid-template-columns:1fr}.sidebar{display:flex;overflow-x:auto;gap:5px;align-items:center}.sidebar h3{display:none}.cat{white-space:nowrap;width:auto}.cat small{margin-left:8px}.wordgrid{grid-template-columns:1fr 1fr}}@media(max-width:460px){.wordgrid{grid-template-columns:1fr}}
 .section-nav{display:flex;gap:8px;margin-bottom:18px}
 .section-nav a{padding:10px 18px;border:1px solid #d7e0eb;border-radius:9px;background:white;color:#1b2b40;text-decoration:none;font-weight:600}
@@ -20,10 +26,38 @@
 .card-face p.flip-cue{margin:auto 0 0;padding-top:12px;color:#0754a0;font-size:13px;font-weight:600}
 .translations{border-top:1px solid #d7e0eb;margin-top:4px;padding-top:5px}
 @media(prefers-reduced-motion:reduce){.card-surface{transition:none}}
-</style></head><body><header><h1>Woordenboek <span style="font-weight:400;color:#8ac9ff">/ Dutch for life</span></h1><p>Practical Dutch from A0 to A2 · English + فارسی</p></header><div class="wrap"><nav class="section-nav" aria-label="Study sections">
+.site-brand{display:flex;align-items:center;gap:14px}
+.site-logo{width:56px;height:56px;flex:none;border:1px solid #54718f;border-radius:14px}
+.install-app{margin-top:14px;border-color:#ffc58b;background:#ffad62;color:#102a43;font-weight:700}
+.install-app:hover{background:#ffd2a7}
+</style></head><body><header><div class="site-brand"><img class="site-logo" src="./icons/icon-192.png" width="56" height="56" alt=""><div><h1>Woordenboek <span style="font-weight:400;color:#8ac9ff">/ Dutch for life</span></h1><p>Practical Dutch from A0 to A2 · English + فارسی</p></div></div><button class="install-app" id="install-app" type="button" hidden>Install app</button></header><div class="wrap"><nav class="section-nav" aria-label="Study sections">
 <a id="words-link" href="./" aria-current="page">Words</a>
 <a id="sentences-link" href="?section=sentences">Sentences</a>
 </nav><div class="stats"><div class="stat"><b id="total">0</b><span id="total-label">Vocabulary entries</span></div><div class="stat"><b id="learned">0</b><span id="learned-label">Words learned</span></div><div class="stat"><b id="progress">0%</b><span>Overall progress</span></div></div><div class="controls"><input id="search" placeholder="Search Dutch, English or فارسی…"><select id="level"><option value="all">All levels</option><option>A0</option><option>A1</option><option>A2</option></select><select id="status"><option id="all-status" value="all">All words</option><option value="todo">Not learned</option><option value="done">Learned</option></select><button id="random">Surprise me</button><button id="export">Export progress</button></div><div class="layout"><aside class="sidebar"><h3>Categories</h3><div id="cats"></div></aside><main class="main"><div class="topline"><h2 id="heading">All vocabulary</h2><span id="count"></span></div><p class="study-hint" id="flip-hint">Tap a card to flip it and see the translations.</p><div class="wordgrid" id="words"></div></main></div><div class="foot">Tap the speaker to hear Dutch pronunciation. <span id="audio-status" role="status"></span> Your progress is saved locally in this browser. A0 is used here as a beginner starting point, not an official CEFR level.</div></div><script src="words.js"></script><script src="sentences.js"></script><script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(error => {
+    console.warn('Offline setup did not complete.', error);
+  });
+}
+
+const installButton = document.getElementById('install-app');
+let installPrompt;
+window.addEventListener('beforeinstallprompt', event => {
+  event.preventDefault();
+  installPrompt = event;
+  installButton.hidden = false;
+});
+installButton.addEventListener('click', async () => {
+  const prompt = installPrompt;
+  installPrompt = undefined;
+  installButton.hidden = true;
+  await prompt?.prompt();
+});
+window.addEventListener('appinstalled', () => {
+  installPrompt = undefined;
+  installButton.hidden = true;
+});
+
 const isSentences = new URLSearchParams(window.location.search).get('section') === 'sentences';
 const entries = isSentences ? SENTENCES : WORDS;
 const studyLabel = isSentences ? 'sentences' : 'words';

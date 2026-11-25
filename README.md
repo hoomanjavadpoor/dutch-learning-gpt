@@ -29,3 +29,10 @@ python scripts/generate_audio.py /path/to/nl-nathalie-x-low.onnx --section sente
 
 Nathalie's [training dataset](https://github.com/rhasspy/dataset-voice-nathalie)
 is published under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+
+## Install on your phone
+
+- **iPhone or iPad:** Open the site in Safari, tap **Share → Add to Home Screen**, then tap **Add**.
+- **Android:** Open the site in Chrome and tap **Install app** when available, or look for the install option in Chrome's menu.
+
+After the initial online visit, words and sentences are available offline. Pronunciation clips can be played offline after they have been played online and cached on that device.
